@@ -106,24 +106,24 @@ optimizer = hvd.DistributedOptimizer(optimizer,
 
 
 def train(epoch):
-    for i in range(epoch):
-        model.train()
-        train_sampler.set_epoch(i)
-        print('==========%d ======', i)
-        for batch_idx, (data, target) in enumerate(train_loader):
-            if args.cuda:
-                data, target = data.cuda(), target.cuda()
-            optimizer.zero_grad()
-            # print('====complet zero_grad===')
-            # print('====begin train ===')
-            output = model(data)
-            loss = F.nll_loss(output, target)
-            loss.backward()
-            optimizer.step()
-            if batch_idx % args.log_interval == 0:
-                print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
-                    epoch, batch_idx * len(data), len(train_sampler),
-                    100. * batch_idx / len(train_loader), loss.item()))
+    # for i in range(epoch):
+    model.train()
+    train_sampler.set_epoch(epoch)
+    print('==========%d ======', epoch)
+    for batch_idx, (data, target) in enumerate(train_loader):
+        if args.cuda:
+            data, target = data.cuda(), target.cuda()
+        optimizer.zero_grad()
+        # print('====complet zero_grad===')
+        # print('====begin train ===')
+        output = model(data)
+        loss = F.nll_loss(output, target)
+        loss.backward()
+        optimizer.step()
+        if batch_idx % args.log_interval == 0:
+            print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+                epoch, batch_idx * len(data), len(train_sampler),
+                100. * batch_idx / len(train_loader), loss.item()))
 
 
 def metric_average(val, name):
@@ -159,4 +159,5 @@ def test():
 
 for epoch in range(1, args.epochs + 1):
     train(epoch)
-    test()
+
+test()
