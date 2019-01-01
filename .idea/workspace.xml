@@ -34,25 +34,25 @@
         <counts>
           <entry key="cluster1" value="3" />
           <entry key="cluster2" value="5" />
-          <entry key="py" value="143" />
+          <entry key="py" value="147" />
           <entry key="sh" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="25" />
-          <entry key="Python" value="143" />
+          <entry key="Python" value="147" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/torch_mnist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1501">
-              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="209">
+              <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/torch_imagenet_resnet50.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="111" selection-start-line="16" selection-start-column="111" selection-end-line="16" selection-end-column="111" />
+            <state relative-caret-position="566">
+              <caret line="194" column="24" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="24" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -111,11 +111,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>rank</find>
-      <find>train_sampler</find>
       <find>data</find>
       <find>resume_from_epoch</find>
-      <find>broadcast</find>
       <find>hvd</find>
+      <find>broadcast</find>
+      <find>train_sampler</find>
+      <find>train</find>
+      <find>models</find>
+      <find>model</find>
+      <find>train_loader</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,15 +131,15 @@
       <list>
         <option value="$PROJECT_DIR$/cluster2" />
         <option value="$PROJECT_DIR$/cluster1" />
-        <option value="$PROJECT_DIR$/torch_mnist.py" />
         <option value="$PROJECT_DIR$/mpi.sh" />
         <option value="$PROJECT_DIR$/torch_imagenet_resnet50.py" />
+        <option value="$PROJECT_DIR$/torch_mnist.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1876" />
+    <option name="y" value="17" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -187,7 +192,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1876" y="17" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -213,13 +218,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cluster2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cluster1">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -234,20 +232,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/torch_mnist.py">
+    <entry file="file://$PROJECT_DIR$/cluster2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/torch_imagenet_resnet50.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="194" column="24" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="24" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/torch_imagenet_resnet50.py">
+    <entry file="file://$PROJECT_DIR$/torch_mnist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="111" selection-start-line="16" selection-start-column="111" selection-end-line="16" selection-end-column="111" />
+        <state relative-caret-position="209">
+          <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>

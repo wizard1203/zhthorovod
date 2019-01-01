@@ -106,10 +106,9 @@ optimizer = hvd.DistributedOptimizer(optimizer,
 
 
 def train(epoch):
-    model.train()
-    train_sampler.set_epoch(epoch)
-    
     for i in range(epoch):
+        model.train()
+        train_sampler.set_epoch(epoch)
         print('==========%d ======', i)
         for batch_idx, (data, target) in enumerate(train_loader):
             if args.cuda:
