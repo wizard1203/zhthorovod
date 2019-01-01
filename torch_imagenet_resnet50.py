@@ -14,7 +14,7 @@ from tqdm import tqdm
 # Training settings
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Example',
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('--train-dir', default=os.path.expanduser('/home/datasets/imagenet/ILSVRC2012_dataset/train '),
+parser.add_argument('--train-dir', default=os.path.expanduser('/home/datasets/imagenet/ILSVRC2012_dataset/train'),
                     help='path to training data')
 parser.add_argument('--val-dir', default=os.path.expanduser('/home/datasets/imagenet/ILSVRC2012_dataset/val'),
                     help='path to validation data')
