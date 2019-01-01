@@ -108,6 +108,7 @@ def train(epoch):
     train_sampler.set_epoch(epoch)
     
     for i in range(epoch):
+        print('==========%d ======', i)
         for batch_idx, (data, target) in enumerate(train_loader):
             if args.cuda:
                 data, target = data.cuda(), target.cuda()
