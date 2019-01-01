@@ -15,4 +15,4 @@ data_dir=/home/shshi/data/imagenet/imagenet_hdf5
 mpirun -np $nworkers -hostfile cluster$nworkers -bind-to none -map-by slot \
     -x NCCL_DEBUG=DEBUG -x LD_LIBRARY_PATH -x PATH \
     -mca pml ob1 -mca btl ^openib \
-    python torch_mnist.py
+    python torch_imagenet_resnet50.py
