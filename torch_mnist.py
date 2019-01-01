@@ -7,6 +7,8 @@ from torchvision import datasets, transforms
 import torch.utils.data.distributed
 import horovod.torch as hvd
 
+NUM_CPU_THREADS=4
+
 # Training settings
 parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
 parser.add_argument('--batch-size', type=int, default=64, metavar='N',
@@ -49,7 +51,7 @@ train_dataset = \
 train_sampler = torch.utils.data.distributed.DistributedSampler(
     train_dataset, num_replicas=hvd.size(), rank=hvd.rank())
 train_loader = torch.utils.data.DataLoader(
-    train_dataset, batch_size=args.batch_size, sampler=train_sampler, **kwargs)
+    train_dataset, batch_size=args.batch_size, num_workers=NUM_CPU_THREADS, pin_memory=True, sampler=train_sampler, **kwargs)
 
 test_dataset = \
     datasets.MNIST('data-%d' % hvd.rank(), train=False, transform=transforms.Compose([
@@ -113,6 +115,8 @@ def train(epoch):
             if args.cuda:
                 data, target = data.cuda(), target.cuda()
             optimizer.zero_grad()
+            # print('====complet zero_grad===')
+            # print('====begin train ===')
             output = model(data)
             loss = F.nll_loss(output, target)
             loss.backward()
