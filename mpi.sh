@@ -1,4 +1,4 @@
-nworkers=2
+nworkers=4
 #lr=0.1
 lr=0.01
 batch_size=64
